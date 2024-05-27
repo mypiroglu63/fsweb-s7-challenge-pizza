@@ -1,0 +1,915 @@
+/*
+.sip-button {
+  background-color: #fdc913;
+}
+.pizza-form-header {
+  background-color: #faf7f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pizza-section {
+  background-color: #fff;
+}
+
+.pizza-section h2,
+.pizza-section h3,
+.pizza-section p {
+  text-align: center;
+  margin: 0;
+}
+
+.pizza-section h3,
+.pizza-section p {
+  margin-top: 0.5rem;
+}
+
+.pizza-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pizza-info h3 {
+  margin: 0;
+}
+
+.pizza-rating {
+  text-align: right;
+}
+
+.pizza-rating p {
+  margin: 0;
+}
+
+.formAlani {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  height: 100%; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.options label {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.toppings-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.top-text {
+  margin-left: 0px;
+  margin-bottom: 1px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.toppings-info {
+  margin-top: 6px;
+  font-size: 12px;
+  color: grey;
+  margin: 5px 0;
+  text-align: left;
+}
+
+.toppings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 50px;
+  text-align: center;
+}
+
+.toppings label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkmark {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.toppings input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toppings input[type="checkbox"]:checked + .checkmark::before {
+  content: "\2714";
+  font-size: 16px;
+  color: black;
+}
+
+.toppings input[type="checkbox"]:checked + .checkmark {
+  background-color: #fdc913;
+  border-color: #fdc913;
+}
+hr {
+  margin: 2rem 0;
+}
+
+.order-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.counter {
+  margin-top: -180px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #faf7f2;
+}
+
+.counter button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #faf7f2;
+  border-radius: 4px;
+  color: black;
+  font-weight: bold;
+}
+
+.counter-value {
+  width: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.red {
+  color: red;
+}
+
+.son-de {
+  width: 280px;
+  padding: 20px;
+  border: 2px solid #faf7f2;
+  border-radius: 10px;
+  background-color: #faf7f2;
+  max-height: 180px;
+}
+
+.kutu-si {
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+}
+
+.kutu-seçim {
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: black;
+  margin-left: 30px;
+  color: #5f5f5f;
+}
+.span-seçim {
+  margin-left: 60px;
+  color: #5f5f5f;
+}
+.kutu-top {
+  font-family: Barlow;
+  font-weight: 600px;
+  font-size: 18px;
+  color: red;
+}
+.span-top {
+  margin-left: 75px;
+}
+
+.sip-but {
+  width: 100%;
+  margin-top: 48px;
+  font-size: 1.2em;
+  color: black;
+  background-color: #fdc913;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sip-but:disabled {
+  background-color: #fdc913;
+  cursor: not-allowed;
+}
+
+
+@media screen and (max-width: 768px) {
+  .pizza-section {
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 90%;
+  }
+
+  .formAlani {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    height: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    overflow-y: auto;
+  }
+  .options label {
+    flex: 1 0 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .topping-column {
+    margin-right: 0;
+  }
+}
+
+.pizzaboyut-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label-text {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px; 
+
+.radio-buttons {
+  display: flex;
+  gap: 10px; 
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type="radio"] {
+  display: none; 
+}
+
+.custom-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  background-color: #faf7f2;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px; 
+  color: black; 
+
+input[type="radio"]:checked + .custom-radio {
+  background-color: #fdc913; 
+  color: black;
+  font-weight: bold;
+}
+
+input[type="radio"]:disabled + .custom-radio {
+  background-color: #faf7f2; 
+  cursor: not-allowed;
+}
+
+.custom-radio:hover {
+  background-color: #faf7f2;
+}
+.pizzahamur-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 16px;
+}
+
+.label-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.label-text .required {
+  color: red;
+  margin-left: 5px;
+}
+
+select {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+select:focus {
+  border-color: #fdc913;
+  outline: none;
+}
+
+select:disabled {
+  background-color: #faf7f2;
+  cursor: not-allowed;
+}
+
+option {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.isimAlani {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.dort {
+  margin-left: 380px;
+  color: #5f5f5f;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.ikiyuz {
+  margin-left: 100px;
+  font-size: 14px;
+  color: #5f5f5f;
+  font-weight: lighter;
+}
+
+.baslik-yazilar {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 600px; 
+  padding: 20px;
+  
+  border-radius: 10px; 
+}
+
+.baslik-yazilar h2,
+.baslik-yazilar h3,
+.baslik-yazilar p {
+  margin: 0 0 10px 0; 
+}
+
+.pizza-info {
+  display: flex;
+  align-items: center;
+}
+
+.pizza-info h3 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.baslik-yazilar h2 {
+  margin-left: -295px;
+  margin-bottom: 25px;
+}
+*/
+
+.sip-button {
+  background-color: #fdc913;
+}
+.pizza-form-header {
+  background-color: #faf7f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pizza-section {
+  background-color: #fff;
+}
+
+.pizza-section h2,
+.pizza-section h3,
+.pizza-section p {
+  text-align: center;
+  margin: 0;
+}
+
+.pizza-section h3,
+.pizza-section p {
+  margin-top: 0.5rem;
+}
+
+.pizza-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pizza-info h3 {
+  margin: 0;
+}
+
+.pizza-rating {
+  text-align: right;
+}
+
+.pizza-rating p {
+  margin: 0;
+}
+
+.formAlani {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  height: 100%; /* Form alanını ekran yüksekliğine kadar genişlet */
+  display: flex;
+  justify-content: center; /* Form alanını yatayda ortala */
+  align-items: center; /* Form alanını dikeyde ortala */
+}
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.options label {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.toppings-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.top-text {
+  margin-left: 0px;
+  margin-bottom: 1px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.toppings-info {
+  margin-top: 6px;
+  font-size: 12px;
+  color: grey;
+  margin: 5px 0;
+  text-align: left;
+}
+
+.toppings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Checkboxları üç sütuna böl */
+  gap: 50px;
+  text-align: center;
+}
+
+.toppings label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkmark {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.toppings input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toppings input[type="checkbox"]:checked + .checkmark::before {
+  content: "\2714";
+  font-size: 16px;
+  color: black;
+}
+
+.toppings input[type="checkbox"]:checked + .checkmark {
+  background-color: #fdc913;
+  border-color: #fdc913;
+}
+hr {
+  margin: 2rem 0;
+}
+
+.order-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.counter {
+  margin-top: -180px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #faf7f2;
+}
+
+.counter button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #faf7f2;
+  border-radius: 4px;
+  color: black;
+  font-weight: bold;
+}
+
+.counter-value {
+  width: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.red {
+  color: red;
+}
+
+.son-de {
+  width: 280px;
+  padding: 20px;
+  border: 2px solid #faf7f2;
+  border-radius: 10px;
+  background-color: #faf7f2;
+  max-height: 180px;
+}
+
+.kutu-si {
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+}
+
+.kutu-seçim {
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: black;
+  margin-left: 30px;
+  color: #5f5f5f;
+}
+.span-seçim {
+  margin-left: 60px;
+  color: #5f5f5f;
+}
+.kutu-top {
+  font-family: Barlow;
+  font-weight: 600px;
+  font-size: 18px;
+  color: red;
+}
+.span-top {
+  margin-left: 75px;
+}
+
+.sip-but {
+  width: 100%;
+  margin-top: 48px;
+  font-size: 1.2em;
+  color: black;
+  background-color: #fdc913;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sip-but:disabled {
+  background-color: #fdc913;
+  cursor: not-allowed;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .pizza-section {
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 90%;
+  }
+
+  .formAlani {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    height: 100%; /* Form alanını ekran yüksekliğine kadar genişlet */
+    display: flex;
+    justify-content: center; /* Form alanını yatayda ortala */
+    align-items: center; /* Form alanını dikeyde ortala */
+    overflow-y: auto; /* Scrollbarsız kaydırma */
+  }
+  .options label {
+    flex: 1 0 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .topping-column {
+    margin-right: 0;
+  }
+}
+
+.pizzaboyut-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label-text {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px; /* "Boyut Seç" yazısı ile radyo butonları arasına boşluk ekler */
+}
+
+.radio-buttons {
+  display: flex;
+  gap: 10px; /* Radyo butonları arasına boşluk ekler */
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type="radio"] {
+  display: none; /* Radyo butonlarını gizler */
+}
+
+.custom-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Yuvarlak şekil verir */
+  background-color: #faf7f2;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px; /* Yazı boyutunu ayarlar */
+  color: black; /* Yazı rengi */
+}
+
+input[type="radio"]:checked + .custom-radio {
+  background-color: #fdc913; /* Seçili olduğunda arkaplan rengi */
+  color: black;
+  font-weight: bold;
+}
+
+input[type="radio"]:disabled + .custom-radio {
+  background-color: #faf7f2; /* Devre dışı olduğunda arkaplan rengi */
+  cursor: not-allowed;
+}
+
+.custom-radio:hover {
+  background-color: #faf7f2; /* Hover durumunda arkaplan rengi */
+}
+.pizzahamur-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 16px;
+}
+
+.label-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.label-text .required {
+  color: red;
+  margin-left: 5px;
+}
+
+select {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+select:focus {
+  border-color: #fdc913;
+  outline: none;
+}
+
+select:disabled {
+  background-color: #faf7f2;
+  cursor: not-allowed;
+}
+
+option {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.isimAlani {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.dort {
+  margin-left: 380px;
+  color: #5f5f5f;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.ikiyuz {
+  margin-left: 100px;
+  font-size: 14px;
+  color: #5f5f5f;
+  font-weight: lighter;
+}
+
+.baslik-yazilar {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 600px; /* İhtiyaca göre ayarlanabilir */
+  padding: 20px;
+  /* Arka plan rengi, isteğe bağlı */
+  border-radius: 10px; /* Köşelerin yuvarlatılması, isteğe bağlı */
+}
+
+.baslik-yazilar h2,
+.baslik-yazilar h3,
+.baslik-yazilar p {
+  margin: 0 0 10px 0; /* Alt boşluk, ihtiyaca göre ayarlanabilir */
+}
+
+.pizza-info {
+  display: flex;
+  align-items: center;
+}
+
+.pizza-info h3 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.baslik-yazilar h2 {
+  margin-left: -295px;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 480px) {
+  .pizza-section {
+    padding: 1rem;
+    margin: 0.5rem auto;
+    max-width: 95%;
+  }
+
+  .formAlani {
+    max-width: 100%;
+    margin: 1rem auto 0;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .options {
+    flex-direction: column;
+  }
+
+  .options label {
+    flex: 1 0 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .counter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .counter-value {
+    width: auto;
+    text-align: left;
+  }
+
+  .order-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toppings {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .radio-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .custom-radio {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pizzaboyut-container,
+  .pizzahamur-container {
+    width: 100%;
+  }
+
+  .pizza-info h3 {
+    font-size: 20px;
+  }
+
+  .baslik-yazilar h2 {
+    margin-left: 0;
+    text-align: center;
+  }
+}
