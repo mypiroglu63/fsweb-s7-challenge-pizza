@@ -277,7 +277,7 @@ const FormPage = ({ setOrder }) => {
                     type="submit"
                     disabled={!isFormValid()}
                   >
-                    Sipariş Ver
+                    Sipariş Ver !
                   </button>
                   <img src="src\assets\discord.svg" alt="" />
                 </div>
