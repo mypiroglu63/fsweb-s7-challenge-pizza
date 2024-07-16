@@ -279,6 +279,7 @@ const FormPage = ({ setOrder }) => {
                   >
                     Sipariş Ver
                   </button>
+                  <img src="src\assets\discord.svg" alt="" />
                 </div>
               </div>
             </div>
